@@ -23,11 +23,9 @@ def checkValidDate(date_text):
         raise ValueError("Incorrect Date, please enter valid date")
 
 def extract_values(obj, key):
-    """Pull all values of specified key from nested JSON."""
     arr = []
 
     def extract(obj, arr, key):
-        """Recursively search for values of key in JSON tree."""
         if isinstance(obj, dict):
             for k, v in obj.items():
                 if isinstance(v, (dict, list)):
